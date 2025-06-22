@@ -2,3 +2,4 @@ hifiasm -o dama.asm -t32 -l0 ~/dama/canu/ccs.fa.gz 2> dama.asm.loga
 ## The awk script '$1 == "S" {print ">"$2"\n"$3}' input.gfa > output.contig is used to convert hap1 and hap2 from GFA to contig.
 ragoo.py  ./hap1.fa ./cs10.fa  ### cs10 is the genome of CBDAX
 perl -w ragoo.pl  ragoo.fasta | seqkit seq -w 100  >  hap1.raoo.contig.fa 
+bash hic.sh ##Run Juicer to generate the Hi-C map
