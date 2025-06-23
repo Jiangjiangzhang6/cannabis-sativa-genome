@@ -19,6 +19,6 @@ python /public/home/zhangjiangjiang/software/DeepTE-master/DeepTE.py \
     -d working_dir \
     -i un.fa \
     -m_dir ~/jjzhang/yan/genome/hemp/03.changsha_genome/01.hap1/04.repeatmasker/03.anno_further1_deepte/Plants_model -sp P
-perl handle_un_te.pl | perl 4.pl - > opt_DeepTE.fasta2 ### handle the deepte annotation
+perl handle_un_te.pl | perl handle_te.pl - > opt_DeepTE.fasta2 ### handle the deepte annotation
 cat opt_DeepTE.fasta2 no_un.fa |seqkit seq -w 100 > deepte_an.fa ### merge the unknown element annotation by deepte and the raw annotaion file library
 RepeatMasker -pa 20 -e ncbi -lib deepte_an.fa fa1  -gff -xsmall ### genome repeat annotation again. and the comparable the two results
