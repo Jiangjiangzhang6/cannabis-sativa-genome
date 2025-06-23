@@ -1,5 +1,5 @@
 #!/usr/bin/R
-###figure 5a
+###figure 4a
 a<- read.table("lai_all1.txt",header = T,sep = "\t")
 #a$id2 <- factor(a$id2,levels = c("hap1_gypsy","hap1_copia","hap1_unknown","hap1_all","hap2_gypsy","hap2_copia","hap2_unknown","hap2_all","fj_hemp_gypsy","fj_hemp_copia","fj_hemp_unknown","fj_hemp_all","cs10_gypsy","cs10_copia","cs10_unknown","cs10_all","jl_wild_gypsy","jl_wild_copia","jl_wild_unknown","jl_wild_all"))
 a$yb <- factor(a$yb,levels = c("intact","all"))
@@ -14,7 +14,7 @@ p1 <- ggplot(a,aes(x=id2,y=num2/1000000,fill=yb)) + geom_bar(stat = 'identity',w
 p1
 #ggsave("lai_ltr_rt_length1.pdf",p1,width = 20,height = 20,units = "cm")
 
-###figure 5b
+###figure 4b
 library(ggplot2)
 a <- read.table("hemp_intact_num.txt",header = T,sep = "\t")
 a1 <- subset(a,a$yb == "intact")
