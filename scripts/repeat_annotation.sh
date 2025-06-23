@@ -3,6 +3,7 @@
 #SBATCH -n 10
 #SBATCH -N 1
 
+####this script was written by Jiangjiang Zhang
 
 ### the raw repeat annotaion
 BuildDatabase  -name "hap1" hap1.fa
