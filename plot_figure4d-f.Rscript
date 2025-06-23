@@ -1,6 +1,7 @@
+#!/usr/bin/R
 library(ggplot2)
 library(tidyverse)
-b<-read.table("cannbio.intact_length.result2",header = F,sep = "\t")
+b<-read.table("cannabis.intact_length.result",header = F,sep = "\t")
 names(b) <- c("id","num","total_length","avergae","type")
 pivot_longer(b,c(2,3,4)) ->a
 names(a) <- c("id","type","cat","value")
